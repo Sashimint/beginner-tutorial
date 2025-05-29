@@ -63,6 +63,9 @@ mainButton.addEventListener('click', () => {
   // Go to next image
   currentIndex++;
   
+  // Always hide the replay button during image cycling
+  replayButton.classList.add('hidden');
+
   // Update if not at the end
   if (currentIndex < images.length) {
     updateImage();
