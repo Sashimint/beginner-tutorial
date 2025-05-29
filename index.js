@@ -19,6 +19,7 @@ const images = [
 const imageContent = document.querySelector('.image-content');  // Image container
 const mainButton = document.getElementById('main-button');      // Image switch button
 const finalMessage = document.querySelector('.final-message');  // Final message
+const replayButton = document.getElementById('replay-button');
 
 // =============================================
 // STEP 3: Track what image we're at 
@@ -71,5 +72,14 @@ mainButton.addEventListener('click', () => {
   if (currentIndex === images.length - 1) {
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
+    replayButton.classList.remove('hidden'); // show replay button
   }
+});
+
+replayButton.addEventListener('click', () => {
+  currentIndex = 0;
+  finalMessage.style.display = 'none';
+  replayButton.classList.add('hidden');
+  mainButton.style.display = 'block';
+  updateImage();
 });

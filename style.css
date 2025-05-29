@@ -156,6 +156,31 @@
     transform: scale(1.05);
   }
   
+  #replay-button {
+    position: relative;
+    height: 16.5%;
+    aspect-ratio: 175 / 44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-button);
+    border: var(--border-width-inner) solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+    text-align: center;
+    font-family: var(--font-family-main);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    transition: transform 0.2s ease;
+  }
+  
+  #replay-button:hover {
+    transform: scale(1.05);
+  }  
+
   .final-message {
     display: none; /* Hide it initially */
     color: var(--color-message-text);
@@ -166,6 +191,10 @@
     font-weight: 400;
     line-height: normal;
     margin-top: 4px;
+  }
+  
+  .hidden {
+    display: none;
   }
   
   /* Responsive Styles for Mobile */
