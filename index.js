@@ -64,19 +64,18 @@ mainButton.addEventListener('click', () => {
   // Go to next image
   currentIndex++;
   
-  // Always hide the replay button during image cycling
-  replayButton.classList.add('hidden');
-
-  // Update if not at the end
-  if (currentIndex < images.length) {
-    updateImage();
-  }
-  
-  // Once at the last image, show the final message and hide the button 
   if (currentIndex === images.length - 1) {
+    updateImage();
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
-    replayButton.classList.remove('hidden'); // show replay button
+    replayButton.classList.remove('hidden');
+  }
+  // Still within first 5 images
+  else if (currentIndex < images.length - 1) {
+    updateImage();
+    replayButton.classList.add('hidden');
+    mainButton.style.display = 'block';
+    finalMessage.style.display = 'none';
   }
 });
 
