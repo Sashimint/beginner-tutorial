@@ -64,18 +64,18 @@ mainButton.addEventListener('click', () => {
   // Go to next image
   currentIndex++;
   
-  if (currentIndex === images.length - 1) {
-    updateImage();
+  // Reached LAST image (index 5)
+  if (currentIndex === images.length) {
+    // End of image array
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
     replayButton.classList.remove('hidden');
-  }
-  // Still within first 5 images
-  else if (currentIndex < images.length - 1) {
+  } else {
+    // Still within image range
     updateImage();
+    finalMessage.style.display = 'none';
     replayButton.classList.add('hidden');
     mainButton.style.display = 'block';
-    finalMessage.style.display = 'none';
   }
 });
 
