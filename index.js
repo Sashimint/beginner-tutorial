@@ -20,6 +20,7 @@ const imageContent = document.querySelector('.image-content');  // Image contain
 const mainButton = document.getElementById('main-button');      // Image switch button
 const finalMessage = document.querySelector('.final-message');  // Final message
 const replayButton = document.getElementById('replay-button');
+replayButton.classList.add('hidden');
 
 // =============================================
 // STEP 3: Track what image we're at 
