@@ -94,6 +94,7 @@ mainButton.addEventListener('click', () => {
     replayButton.classList.remove('hidden');
     playButton.classList.remove('hidden');
     progressContainer.classList.remove('hidden');
+    document.querySelector('.final-deco-wrapper').style.display = 'flex';
     return;
   }
 
@@ -124,6 +125,7 @@ replayButton.addEventListener('click', () => {
   playButton.classList.remove('hidden');
   progressContainer.classList.remove('hidden');
   document.getElementById('song-title').classList.remove('hidden');
+  document.querySelector('.final-deco-wrapper').style.display = 'none';
 });
 
 
