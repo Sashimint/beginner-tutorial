@@ -23,6 +23,8 @@ const replayButton = document.getElementById('replay-button');
 const playButton = document.getElementById('play-button');
 const audio = document.getElementById('audio-player');
 playButton.classList.add('hidden');
+const progressContainer = document.getElementById('progress-container');
+const progressBar = document.getElementById('progress-bar');
 
 // =============================================
 // STEP 3: Track what image we're at 
@@ -64,23 +66,33 @@ updateImage();
 // =============================================
 // STEP 6: Button click handler 
 // =============================================
-// Change image when button is clicked
+
+let hasStartedAudio = false;
+let hasStartedAudio = false;
+
 mainButton.addEventListener('click', () => {
-  // Go to next image
+  if (!hasStartedAudio) {
+    audio.play();
+    hasStartedAudio = true;
+    playButton.textContent = '⏸'; // ensure icon matches state
+  }
+
+  // Show image first
+  updateImage();
+
+  // Go to next image index
   currentIndex++;
-  
-  // If we’ve reached the end
+
+  // If we’ve just finished the last image
   if (currentIndex >= images.length) {
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
     imageContent.style.backgroundImage = 'none';
+    document.getElementById('song-title').classList.remove('hidden');
     replayButton.classList.remove('hidden');
     playButton.classList.remove('hidden');
-    return;
+    progressContainer.classList.remove('hidden');
   }
-
-  // Otherwise: update image
-  updateImage();
 });
 
 // =============================================
@@ -94,6 +106,8 @@ replayButton.addEventListener('click', () => {
   replayButton.classList.add('hidden');
   mainButton.style.display = 'block';
   playButton.classList.add('hidden');
+  progressContainer.classList.add('hidden');
+  document.getElementById('song-title').classList.add('hidden');
   playButton.textContent = '▶'; // reset icon
   audio.pause();
   audio.currentTime = 0;
@@ -111,4 +125,19 @@ playButton.addEventListener('click', () => {
     audio.pause();
     playButton.textContent = '▶';
   }
+});
+
+// Update progress bar as audio plays
+audio.addEventListener('timeupdate', () => {
+  const percent = (audio.currentTime / audio.duration) * 100;
+  progressBar.style.width = `${percent}%`;
+});
+
+// Seek audio position when bar is clicked
+progressContainer.addEventListener('click', (e) => {
+  const width = progressContainer.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
 });
