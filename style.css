@@ -73,16 +73,17 @@
   .inner-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 430 / 280;
+    height: 420px;
     border: var(--border-width-inner) solid var(--color-border);
     border-radius: var(--border-radius);
     background: var(--color-inner-container-background);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
-    gap: 1.5rem;
+    padding: 1rem;
+    gap: 1.2rem;
+    box-sizing: border-box;
   }
   
   /* Header */
@@ -116,7 +117,7 @@
   .shrink-icon {
     width: 32px;
     height: 32px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 6px;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
@@ -124,14 +125,10 @@
   
   /* Image Content */
   .image-content {
-    position: relative;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    height: 85%;
-    aspect-ratio: 142.5 / 171;
+    width: 100%;
+    height: 65%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background: var(--image-path-content) no-repeat center;
     background-size: contain;
@@ -139,39 +136,12 @@
     opacity: 1;
   }
   
-  /* Main Button */
-  #main-button {
-    position: relative;
-    height: 16.5%;
-    aspect-ratio: 175 / 44;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap-button);
-    border: var(--border-width-inner) solid var(--color-border);
-    border-radius: var(--border-radius);
-    background: var(--color-button-background);
-    color: var(--color-button-text);
-    text-align: center;
-    font-family: var(--font-family-main);
-    font-size: var(--font-size-medium);
-    font-weight: 400;
-    font-style: normal;
-    line-height: normal;
-    transition: transform 0.2s ease;
-  }
-  
-  #main-button:hover {
-    transform: scale(1.05);
-  }
-  
+  #main-button,
   #replay-button {
-    position: relative;
-    height: 16.5%;
-    aspect-ratio: 175 / 44;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.75rem 1.5rem; /* this controls size instead of height */
     gap: var(--gap-button);
     border: var(--border-width-inner) solid var(--color-border);
     border-radius: var(--border-radius);
@@ -184,18 +154,12 @@
     font-style: normal;
     line-height: normal;
     transition: transform 0.2s ease;
-  }
-  
-  #replay-button:hover {
-    transform: scale(1.05);
-  }  
-
-  #main-button, #replay-button {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
   }
 
   .final-message {
-    display: none; /* Hide it initially */
+    display: none;
     color: var(--color-message-text);
     text-align: center;
     font-family: var(--font-family-main);
