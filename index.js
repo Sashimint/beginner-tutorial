@@ -68,22 +68,17 @@ updateImage();
 // =============================================
 
 let hasStartedAudio = false;
-let hasStartedAudio = false;
 
+// Change image when button is clicked
 mainButton.addEventListener('click', () => {
-  if (!hasStartedAudio) {
+  // Go to next image
+  currentIndex++;
+    if (!hasStartedAudio) {
     audio.play();
     hasStartedAudio = true;
     playButton.textContent = '⏸'; // ensure icon matches state
   }
-
-  // Show image first
-  updateImage();
-
-  // Go to next image index
-  currentIndex++;
-
-  // If we’ve just finished the last image
+  // If we’ve reached the end
   if (currentIndex >= images.length) {
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
@@ -92,7 +87,11 @@ mainButton.addEventListener('click', () => {
     replayButton.classList.remove('hidden');
     playButton.classList.remove('hidden');
     progressContainer.classList.remove('hidden');
+    return;
   }
+
+  // Otherwise: update image
+  updateImage();
 });
 
 // =============================================
