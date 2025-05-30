@@ -70,6 +70,7 @@ mainButton.addEventListener('click', () => {
   if (currentIndex >= images.length) {
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
+    imageContent.style.backgroundImage = 'none';
     replayButton.classList.remove('hidden');
     return;
   }
