@@ -76,7 +76,7 @@
     height: 420px;
     border: var(--border-width-inner) solid var(--color-border);
     border-radius: var(--border-radius);
-    background: var(--color-inner-container-background);
+    background: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -97,7 +97,7 @@
     text-align: center;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem 1rem;
   }
   
   /* Shrink Close Icons */
