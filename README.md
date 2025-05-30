@@ -16,6 +16,20 @@ made for a special someone 💜
 - 📱 Responsive design (desktop & mobile)
 
 ---
+## 📁 Project Structure
+
+shimi-gift/
+├── assets/
+│ ├── image-content/ # images (1–6)
+│ ├── bunny-bg.jpeg
+│ ├── pixel-heart.gif
+│ └── bunny-favicon.ico # Shortcut icon
+├── index.html # Main webpage
+├── style.css # Styles & animations
+├── index.js # Tap logic, audio, transitions
+└── README.md # Project overview
+
+---
 
 ## 💻 How to Use Locally on Desktop
 
