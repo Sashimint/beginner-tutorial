@@ -11,8 +11,8 @@
     --color-message-text: #7A48B6;
     
     /* Images */
-    --image-path-background: url('assets/main-bg.png');
-    --image-path-content: url('assets/image-content/image-1.png');
+    --image-path-background: url('assets/bunny-background.jpeg');
+    --image-path-content: url('assets/image-content/bunny-1.png');
     
     /* Fonts */
     --font-family-main: "Pixelify Sans", sans-serif;
