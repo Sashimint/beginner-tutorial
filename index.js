@@ -56,11 +56,7 @@ function updateImage() {
     
     // Fade in new image
     imageContent.style.opacity = 1;
-
-    // Only add floating animation if not the last frame
-    if (currentIndex < images.length - 1) {
-      imageContent.classList.add('floating');
-    }
+    imageContent.classList.add('floating');
   };
 }
 
