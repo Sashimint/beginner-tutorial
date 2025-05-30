@@ -22,9 +22,10 @@ const finalMessage = document.querySelector('.final-message');  // Final message
 const replayButton = document.getElementById('replay-button');
 const playButton = document.getElementById('play-button');
 const audio = document.getElementById('audio-player');
-const playButton = document.getElementById('play-button');
 const progressBar = document.getElementById('progress-bar');
 const progressContainer = document.getElementById('progress-container');
+const currentTimeDisplay = document.getElementById('current-time');
+const durationDisplay = document.getElementById('duration');
 
 // =============================================
 // STEP 3: Track what image we're at 
@@ -116,7 +117,33 @@ replayButton.addEventListener('click', () => {
 // STEP 8: Add audio file
 // =============================================
 
-// toggle play/pause
+// Format mm:ss
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m}:${s < 10 ? '0' : ''}${s}`;
+}
+
+// Set total duration
+audio.addEventListener('loadedmetadata', () => {
+  durationDisplay.textContent = formatTime(audio.duration);
+});
+
+// Update time and progress bar
+audio.addEventListener('timeupdate', () => {
+  const percent = (audio.currentTime / audio.duration) * 100;
+  progressBar.style.width = `${percent}%`;
+  currentTimeDisplay.textContent = formatTime(audio.currentTime);
+});
+
+// Click to seek
+progressContainer.addEventListener('click', (e) => {
+  const width = progressContainer.clientWidth;
+  const clickX = e.offsetX;
+  audio.currentTime = (clickX / width) * audio.duration;
+});
+
+// Toggle play/pause
 playButton.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
@@ -125,17 +152,4 @@ playButton.addEventListener('click', () => {
     audio.pause();
     playButton.textContent = '▶';
   }
-});
-
-// update bar
-audio.addEventListener('timeupdate', () => {
-  const percent = (audio.currentTime / audio.duration) * 100;
-  progressBar.style.width = `${percent}%`;
-});
-
-// seek on click
-progressContainer.addEventListener('click', (e) => {
-  const width = progressContainer.clientWidth;
-  const clickX = e.offsetX;
-  audio.currentTime = (clickX / width) * audio.duration;
 });

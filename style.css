@@ -176,41 +176,41 @@
 
   .audio-ui {
     position: fixed;
-    bottom: 1.2rem;
-    left: 1.2rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid var(--color-border);
+    gap: 0.6rem;
+    padding: 1rem;
     border-radius: 12px;
-    padding: 0.6rem 1rem;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
   }
   
   #play-button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--color-border);
-    background: rgba(233, 223, 255, 0.6);
-    font-size: 1.2rem;
-    font-weight: bold;
+    border: none;
+    background: white;
     color: var(--color-button-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.4rem;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .audio-progress-container {
     flex: 1;
     height: 6px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(200, 200, 200, 0.6);
     border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
   }
   
   .audio-progress {
@@ -220,12 +220,31 @@
     transition: width 0.2s ease;
   }
   
+  #current-time,
+  #duration {
+    font-family: var(--font-family-main);
+    font-size: 0.85rem;
+    color: var(--color-button-text);
+    width: 40px;
+    text-align: center;
+  }
+  
   .song-title {
     font-family: var(--font-family-main);
-    font-size: 0.9rem;
-    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--color-button-text);
-  }  
+    margin: 0;
+    text-align: center;
+  }
+  
+  .audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+  }
   
   /* Responsive Styles for Mobile */
   @media (max-width: 768px) {
