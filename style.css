@@ -194,7 +194,7 @@
   }
   
   .hidden {
-    display: none;
+    display: none !important;
   }
   
   /* Responsive Styles for Mobile */
