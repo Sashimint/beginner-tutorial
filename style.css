@@ -129,6 +129,19 @@
     transition: opacity 0.5s ease;
     opacity: 1;
   }
+
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px); /* adjust as needed */
+    }
+  }
+  
+  .image-content.floating {
+    animation: floatUpDown 2.5s ease-in-out infinite;
+  }  
   
   #main-button,
   #replay-button {
@@ -156,6 +169,35 @@
   transform: scale(1.05);
   background: #ecd8ff;
   }
+
+  .final-deco-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1.2s ease 0.4s forwards;
+    opacity: 0;
+  }  
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .pixel-heart {
+    width: 28px;
+    height: auto;
+    margin-bottom: 0.2rem;
+    image-rendering: pixelated;
+  }
+  
+  .final-date {
+    font-family: var(--font-family-main);
+    font-size: 0.95rem;
+    color: var(--color-button-text);
+    opacity: 0.9;
+    margin: 0;
+  }  
 
   .final-message {
     display: none;
@@ -251,7 +293,7 @@
     overflow: hidden;
     cursor: pointer;
   }
-  
+
   .audio-timeline {
     display: flex;
     align-items: center;
