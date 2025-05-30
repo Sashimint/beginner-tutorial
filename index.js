@@ -138,8 +138,7 @@ function formatTime(seconds) {
 
 // Set total duration
 audio.addEventListener('loadedmetadata', () => {
-  const durationSpan = document.getElementById('duration');
-  durationSpan.textContent = formatTime(audio.duration);
+  durationDisplay.textContent = formatTime(audio.duration);
 });
 
 // Update time and progress bar
