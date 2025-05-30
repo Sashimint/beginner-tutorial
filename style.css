@@ -210,6 +210,22 @@
     line-height: normal;
     margin-top: 0.3rem;
     margin-bottom: 0.5rem;
+    /* animation setup */
+    animation: popIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   
   .hidden {
