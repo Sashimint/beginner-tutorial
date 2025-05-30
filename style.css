@@ -1,14 +1,14 @@
 /* Customization Variables */
 :root {
     /* Colors */
-    --color-page-background: #50AFC9;
-    --color-main-container-background: #FF5B70;
-    --color-inner-container-background: #FFF7F4;
-    --color-border: #9E0E2B;
-    --color-button-background: #FFF;
-    --color-heading-text: #FFF;
-    --color-button-text: #9E0E2B;
-    --color-message-text: #9E0E2B;
+    --color-page-background: #d7c6f9;
+    --color-main-container-background: #e9dfff;
+    --color-inner-container-background: #ffffff;
+    --color-border: #b288e4;
+    --color-button-background: #ddc8f6;
+    --color-heading-text: #7A48B6;
+    --color-button-text: #7A48B6;
+    --color-message-text: #7A48B6;
     
     /* Images */
     --image-path-background: url('assets/main-bg.png');
@@ -20,7 +20,7 @@
     --font-size-medium: 1.5635rem;
     
     /* Border Radius */
-    --border-radius: 0.31269rem;
+    --border-radius: 15px;
     
     /* Border Width */
     --border-width-main: 3px;
@@ -104,6 +104,12 @@
     align-items: center;
     gap: var(--gap-icons);
   }
+
+  .shrink-close-icons:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    cursor: pointer;
+  }  
   
   /* Icons */
   .shrink-icon {
