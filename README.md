@@ -17,7 +17,7 @@ made for a special someone 💜
 
 ---
 ## 📁 Project Structure
-
+```bash
 shimi-gift/
 ├── assets/
 │ ├── image-content/ # images (1–6)
@@ -28,7 +28,7 @@ shimi-gift/
 ├── style.css # Styles & animations
 ├── index.js # Tap logic, audio, transitions
 └── README.md # Project overview
-
+```
 ---
 
 ## 💻 How to Use Locally on Desktop
