@@ -158,6 +158,11 @@
     cursor: pointer;
   }
 
+  #main-button:hover, #replay-button:hover {
+  transform: scale(1.05);
+  background: #ecd8ff;
+  }
+
   .final-message {
     display: none;
     color: var(--color-message-text);
@@ -167,8 +172,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
   }
   
   .hidden {
