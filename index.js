@@ -22,9 +22,9 @@ const finalMessage = document.querySelector('.final-message');  // Final message
 const replayButton = document.getElementById('replay-button');
 const playButton = document.getElementById('play-button');
 const audio = document.getElementById('audio-player');
-playButton.classList.add('hidden');
-const progressContainer = document.getElementById('progress-container');
+const playButton = document.getElementById('play-button');
 const progressBar = document.getElementById('progress-bar');
+const progressContainer = document.getElementById('progress-container');
 
 // =============================================
 // STEP 3: Track what image we're at 
@@ -116,6 +116,7 @@ replayButton.addEventListener('click', () => {
 // STEP 8: Add audio file
 // =============================================
 
+// toggle play/pause
 playButton.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
@@ -126,17 +127,15 @@ playButton.addEventListener('click', () => {
   }
 });
 
-// Update progress bar as audio plays
+// update bar
 audio.addEventListener('timeupdate', () => {
   const percent = (audio.currentTime / audio.duration) * 100;
   progressBar.style.width = `${percent}%`;
 });
 
-// Seek audio position when bar is clicked
+// seek on click
 progressContainer.addEventListener('click', (e) => {
   const width = progressContainer.clientWidth;
   const clickX = e.offsetX;
-  const duration = audio.duration;
-
-  audio.currentTime = (clickX / width) * duration;
+  audio.currentTime = (clickX / width) * audio.duration;
 });

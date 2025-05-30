@@ -30,28 +30,24 @@
         <img src="./assets/bunny-close-icon.png" alt="Close Icon" class="shrink-icon" />
       </div> 
     </header>
+
+    <!-- Audio controller UI (shown outside popup) -->
+    <div class="audio-ui">
+      <button id="play-button">▶</button>
+      <div class="audio-progress-container" id="progress-container">
+        <div class="audio-progress" id="progress-bar"></div>
+      </div>
+      <p id="song-title" class="song-title">🎵 Spring Snow - 10cm</p>
+    </div>
+    <audio id="audio-player" src="assets/audio/spring-snow-10cm.mp3" autoplay></audio>
     
     <div class="inner-container">
       <!-- The image is loaded via CSS from the --image-path-content variable -->
       <div class="image-content"></div>
-      
       <!-- Change the button text -->
       <button id="main-button">tap tap!</button>
-
-      <!-- Play Button -->
-      <button id="play-button" class="hidden">▶</button>
-      <p id="song-title" class="song-title hidden">🎵 Playing: “Spring Snow - 10cm”</p>
-
-      <audio id="audio-player" src="assets/audio/spring-snow-10cm.mp3"></audio>
-
-      <!-- Place the bar BELOW the song title -->
-      <div class="audio-progress-container hidden" id="progress-container">
-        <div class="audio-progress" id="progress-bar"></div>
-      </div>
-      
       <!-- final message text -->
       <div class="final-message">happy to be with you!</div>
-
       <!-- replay or final button -->
       <button id="replay-button" class="hidden">Replay🤍</button>
     </div>

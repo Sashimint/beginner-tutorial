@@ -174,49 +174,43 @@
     display: none !important;
   }
 
+  .audio-ui {
+    position: fixed;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  }
+  
   #play-button {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--color-border); /* dark purple border */
-    background: rgba(233, 223, 255, 0.5);  /* translucent lighter purple */
-    color: var(--color-button-text);
-    font-size: 1.5rem;
+    border: 2px solid var(--color-border);
+    background: rgba(233, 223, 255, 0.6);
+    font-size: 1.2rem;
     font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    color: var(--color-button-text);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
+    cursor: pointer;
   }
   
-  #play-button:hover {
-    transform: scale(1.1);
-    background: rgba(233, 223, 255, 0.65);
-  }  
-
-  .song-title {
-    font-family: var(--font-family-main);
-    font-size: 1rem;
-    color: var(--color-button-text);
-    margin: 0.5rem 0 0.25rem;
-    text-align: center;
-    opacity: 0.85;
-  }  
-  
-  /* Audio progress bar container */
   .audio-progress-container {
-    width: 100%;
-    max-width: 300px;
+    flex: 1;
     height: 6px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
-    margin-bottom: 0.75rem;
   }
   
   .audio-progress {
@@ -224,6 +218,13 @@
     width: 0%;
     background-color: var(--color-button-text);
     transition: width 0.2s ease;
+  }
+  
+  .song-title {
+    font-family: var(--font-family-main);
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    color: var(--color-button-text);
   }  
   
   /* Responsive Styles for Mobile */
