@@ -178,8 +178,8 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: none;
-    background: rgba(255, 255, 255, 0.5); /* translucent */
+    border: 2px solid var(--color-border); /* dark purple border */
+    background: rgba(233, 223, 255, 0.5);  /* translucent lighter purple */
     color: var(--color-button-text);
     font-size: 1.5rem;
     font-weight: bold;
@@ -195,8 +195,8 @@
   
   #play-button:hover {
     transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.65);
-  }
+    background: rgba(233, 223, 255, 0.65);
+  }  
 
   .song-title {
     font-family: var(--font-family-main);
