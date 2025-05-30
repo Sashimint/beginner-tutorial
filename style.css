@@ -175,21 +175,26 @@
   }
 
   #play-button {
-    padding: 0.5rem 1.2rem;
-    margin-top: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: var(--gap-button);
     border: var(--border-width-inner) solid var(--color-border);
     border-radius: var(--border-radius);
     background: var(--color-button-background);
     color: var(--color-button-text);
     font-family: var(--font-family-main);
-    font-size: 1.25rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 500;
     cursor: pointer;
     transition: transform 0.2s ease;
+    margin-bottom: 0.5rem;
   }
   
   #play-button:hover {
     transform: scale(1.05);
+    background: #ecd8ff;
   }  
   
   /* Responsive Styles for Mobile */

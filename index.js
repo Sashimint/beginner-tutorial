@@ -22,6 +22,7 @@ const finalMessage = document.querySelector('.final-message');  // Final message
 const replayButton = document.getElementById('replay-button');
 const playButton = document.getElementById('play-button');
 const audio = document.getElementById('audio-player');
+playButton.classList.add('hidden');
 
 // =============================================
 // STEP 3: Track what image we're at 
@@ -74,6 +75,7 @@ mainButton.addEventListener('click', () => {
     finalMessage.style.display = 'block';
     imageContent.style.backgroundImage = 'none';
     replayButton.classList.remove('hidden');
+    playButton.classList.remove('hidden');
     return;
   }
 
@@ -91,6 +93,10 @@ replayButton.addEventListener('click', () => {
   finalMessage.style.display = 'none';
   replayButton.classList.add('hidden');
   mainButton.style.display = 'block';
+  playButton.classList.add('hidden');
+  playButton.textContent = '▶'; // reset icon
+  audio.pause();
+  audio.currentTime = 0;
 });
 
 // =============================================
@@ -100,9 +106,9 @@ replayButton.addEventListener('click', () => {
 playButton.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
-    playButton.textContent = 'Pause 🎵';
+    playButton.textContent = '⏸';
   } else {
     audio.pause();
-    playButton.textContent = 'Play Song 🎶';
+    playButton.textContent = '▶';
   }
 });
