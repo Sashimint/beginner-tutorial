@@ -1,4 +1,4 @@
-# 🐰 Shimi Gift – A Personalised Pop-Up Surprise
+# 🐰 Shimi's Gift – A Personalised Pop-Up Surprise
 
 **A digital love letter disguised as an animated pixel art experience.**  
 Built to celebrate our anniversary with music, visuals, and heartfelt details,
@@ -24,7 +24,9 @@ made for a special someone 💜
 
 1. Go to your local folder (e.g., `shimi-gift`), and **right-click on the Desktop** > `New` > `Shortcut`.
 2. For the shortcut location, paste this line (adjust the path if needed):
+```bash
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --app="file:///C:/Users/name/shimi-gift/index.html"
+```
 🔁 Replace `"name"` with your actual Windows username.
 
 3. Click **Next**, then name it something cute — like `💜 From Shimi`.
@@ -69,11 +71,11 @@ Now your gift opens in a browser with a personalised icon 🐰
 ## 🧾 Project Notes
 
 > This is a **read-only GitHub repository** – shared for creative showcasing.  
-> **Only the recipient** has full access to the surprise, but anyone curious is welcome to view the code 💌
+> **Only the recipient** has full access to the surprise, but anyone curious is welcome to view the code.
 > The animations, images, and sounds were handcrafted and themed around our shared interests 💜
 
 ---
 
 ## Creator
 
-Made by Sasha
+Made by Sasha 💌
