@@ -108,7 +108,6 @@ mainButton.addEventListener('click', () => {
 .pop {
   animation: popIn 0.6s ease-out forwards;
 }
-
 // =============================================
 // STEP 7: Replay button logic
 // =============================================
@@ -133,6 +132,7 @@ replayButton.addEventListener('click', () => {
   progressContainer.classList.remove('hidden');
   document.getElementById('song-title').classList.remove('hidden');
   document.querySelector('.final-deco-wrapper').style.display = 'none';
+  imageContent.classList.remove('floating');
 });
 
 
