@@ -85,7 +85,7 @@ mainButton.addEventListener('click', () => {
   if (currentIndex >= images.length) {
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
-    imageContent.style.opacity = 0;
+    imageContent.style.backgroundImage = 'none';
     document.getElementById('song-title').classList.remove('hidden');
     replayButton.classList.remove('hidden');
     playButton.classList.remove('hidden');
