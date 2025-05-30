@@ -89,9 +89,6 @@ mainButton.addEventListener('click', () => {
   if (currentIndex >= images.length) {
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
-    finalMessage.classList.remove('pop'); // reset in case replayed
-    void finalMessage.offsetWidth; // force reflow for animation restart
-    finalMessage.classList.add('pop');
     imageContent.style.backgroundImage = 'none';
     document.getElementById('song-title').classList.remove('hidden');
     replayButton.classList.remove('hidden');
@@ -105,9 +102,6 @@ mainButton.addEventListener('click', () => {
   updateImage();
 });
 
-.pop {
-  animation: popIn 0.6s ease-out forwards;
-}
 // =============================================
 // STEP 7: Replay button logic
 // =============================================
@@ -132,7 +126,6 @@ replayButton.addEventListener('click', () => {
   progressContainer.classList.remove('hidden');
   document.getElementById('song-title').classList.remove('hidden');
   document.querySelector('.final-deco-wrapper').style.display = 'none';
-  imageContent.classList.remove('floating');
 });
 
 
