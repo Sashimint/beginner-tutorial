@@ -244,14 +244,14 @@
   }
   
   .audio-progress-container {
-    flex: 1;
+    flex-grow: 1;
     height: 6px;
-    background: rgba(200, 200, 200, 0.6);
+    background: rgba(200, 200, 200, 0.4);
     border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
   }
+  
   .audio-timeline {
     display: flex;
     align-items: center;
@@ -268,11 +268,11 @@
   
   #current-time,
   #duration {
-    font-family: var(--font-family-main);
-    font-size: 0.85rem;
-    color: var(--color-button-text);
-    width: 40px;
+    width: 48px;
     text-align: center;
+    font-family: var(--font-family-main);
+    font-size: 0.9rem;
+    color: var(--color-button-text);
   }
   
   /* Responsive Styles for Mobile */
