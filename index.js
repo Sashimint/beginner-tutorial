@@ -102,16 +102,24 @@ mainButton.addEventListener('click', () => {
 replayButton.addEventListener('click', () => {
   currentIndex = 0;
   updateImage();
+
+  // Reset visual state
   finalMessage.style.display = 'none';
   replayButton.classList.add('hidden');
   mainButton.style.display = 'block';
-  playButton.classList.add('hidden');
-  progressContainer.classList.add('hidden');
-  document.getElementById('song-title').classList.add('hidden');
-  playButton.textContent = '▶'; // reset icon
-  audio.pause();
+  
+  // Instead of hiding these, just reset values to avoid layout jump
+  playButton.textContent = '⏸';  // immediately resume
   audio.currentTime = 0;
+  audio.play();
+  isPlaying = true;
+
+  // Make sure these stay visible and steady
+  playButton.classList.remove('hidden');
+  progressContainer.classList.remove('hidden');
+  document.getElementById('song-title').classList.remove('hidden');
 });
+
 
 // =============================================
 // STEP 8: Add audio file
