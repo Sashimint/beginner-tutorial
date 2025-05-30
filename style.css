@@ -60,8 +60,7 @@
     aspect-ratio: 420 / 330;
     border: var(--border-width-main) solid var(--color-border);
     border-radius: var(--border-radius);
-    background: var(--color-main-container-background);
-    display: flex;
+    background: rgba(233, 223, 255, 0.7);
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +75,7 @@
     height: 420px;
     border: var(--border-width-inner) solid var(--color-border);
     border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(233, 223, 255, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -104,7 +103,7 @@
   .shrink-close-icons {
     display: flex;
     align-items: center;
-    gap: var(--gap-icons);
+    gap: 0.25rem;
   }
   
   /* Icons */
