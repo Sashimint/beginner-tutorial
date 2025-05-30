@@ -337,14 +337,63 @@
   @media (max-width: 768px) {
     body {
       background-size: cover;
-      background-position: bottom center;
+      background-position: center bottom;
+      padding: 1rem;
     }
-  
+
     .container {
-      margin: 1rem;
+      width: 100%;
+      max-width: 95vw;
+      aspect-ratio: auto;
+      margin: 0 auto;
+      padding: 0.75rem;
     }
-  
+
+    .inner-container {
+      height: auto;
+      padding: 0.75rem;
+      gap: 1rem;
+    }
+
+    .shrink-icon {
+      width: 48px;
+      height: 48px;
+    }
+
     h1 {
-      font-size: calc(var(--font-size-large) - 0.25rem);
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    .image-content {
+      background-size: 80%;
+      height: auto;
+      max-height: 300px;
+    }
+
+    #main-button,
+    #replay-button {
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .audio-ui {
+      left: 1rem;
+      right: 1rem;
+      padding: 0.75rem 1rem;
+      gap: 0.5rem;
+    }
+
+    .song-title {
+      font-size: 0.9rem;
+    }
+
+    #play-button {
+      font-size: 1.3rem;
+    }
+
+    #current-time,
+    #duration {
+      font-size: 0.75rem;
     }
   }
