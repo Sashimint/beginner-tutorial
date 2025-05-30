@@ -20,13 +20,15 @@ const imageContent = document.querySelector('.image-content');  // Image contain
 const mainButton = document.getElementById('main-button');      // Image switch button
 const finalMessage = document.querySelector('.final-message');  // Final message
 const replayButton = document.getElementById('replay-button');
-replayButton.classList.add('hidden');
 
 // =============================================
 // STEP 3: Track what image we're at 
 // =============================================
 // Start with the first image (index 0)
 let currentIndex = 0;
+finalMessage.style.display = 'none';
+mainButton.style.display = 'block';
+replayButton.classList.add('hidden');
 
 // =============================================
 // STEP 4: Update image function 
@@ -64,25 +66,26 @@ mainButton.addEventListener('click', () => {
   // Go to next image
   currentIndex++;
   
-  // Reached LAST image (index 5)
-  if (currentIndex === images.length) {
-    // End of image array
+  // If we’ve reached the end
+  if (currentIndex >= images.length) {
     mainButton.style.display = 'none';
     finalMessage.style.display = 'block';
     replayButton.classList.remove('hidden');
-  } else {
-    // Still within image range
-    updateImage();
-    finalMessage.style.display = 'none';
-    replayButton.classList.add('hidden');
-    mainButton.style.display = 'block';
+    return;
   }
+
+  // Otherwise: update image
+  updateImage();
 });
+
+// =============================================
+// STEP 7: Replay button logic
+// =============================================
 
 replayButton.addEventListener('click', () => {
   currentIndex = 0;
+  updateImage();
   finalMessage.style.display = 'none';
   replayButton.classList.add('hidden');
   mainButton.style.display = 'block';
-  updateImage();
 });
