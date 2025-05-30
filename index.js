@@ -105,6 +105,10 @@ mainButton.addEventListener('click', () => {
   updateImage();
 });
 
+.pop {
+  animation: popIn 0.6s ease-out forwards;
+}
+
 // =============================================
 // STEP 7: Replay button logic
 // =============================================
@@ -131,9 +135,6 @@ replayButton.addEventListener('click', () => {
   document.querySelector('.final-deco-wrapper').style.display = 'none';
 });
 
-.pop {
-  animation: popIn 0.6s ease-out forwards;
-}
 
 // =============================================
 // STEP 8: Add audio file
