@@ -173,6 +173,24 @@
   .hidden {
     display: none !important;
   }
+
+  #play-button {
+    padding: 0.5rem 1.2rem;
+    margin-top: 0.25rem;
+    border: var(--border-width-inner) solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+    font-family: var(--font-family-main);
+    font-size: 1.25rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  #play-button:hover {
+    transform: scale(1.05);
+  }  
   
   /* Responsive Styles for Mobile */
   @media (max-width: 768px) {

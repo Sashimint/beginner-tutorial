@@ -20,6 +20,8 @@ const imageContent = document.querySelector('.image-content');  // Image contain
 const mainButton = document.getElementById('main-button');      // Image switch button
 const finalMessage = document.querySelector('.final-message');  // Final message
 const replayButton = document.getElementById('replay-button');
+const playButton = document.getElementById('play-button');
+const audio = document.getElementById('audio-player');
 
 // =============================================
 // STEP 3: Track what image we're at 
@@ -89,4 +91,18 @@ replayButton.addEventListener('click', () => {
   finalMessage.style.display = 'none';
   replayButton.classList.add('hidden');
   mainButton.style.display = 'block';
+});
+
+// =============================================
+// STEP 8: Add audio file
+// =============================================
+
+playButton.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    playButton.textContent = 'Pause 🎵';
+  } else {
+    audio.pause();
+    playButton.textContent = 'Play Song 🎶';
+  }
 });
