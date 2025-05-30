@@ -60,7 +60,8 @@
     aspect-ratio: 420 / 330;
     border: var(--border-width-main) solid var(--color-border);
     border-radius: var(--border-radius);
-    background: rgba(233, 223, 255, 0.7);
+    background: var(--color-main-container-background);
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +76,7 @@
     height: 420px;
     border: var(--border-width-inner) solid var(--color-border);
     border-radius: var(--border-radius);
-    background: rgba(233, 223, 255, 0.8);
+    background: var(--color-inner-container-background);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -96,14 +97,14 @@
     text-align: center;
     box-sizing: border-box;
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 0;
   }
   
   /* Shrink Close Icons */
   .shrink-close-icons {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: var(--gap-icons);
   }
   
   /* Icons */
