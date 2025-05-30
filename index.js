@@ -91,6 +91,7 @@ mainButton.addEventListener('click', () => {
     playButton.classList.remove('hidden');
     progressContainer.classList.remove('hidden');
     document.querySelector('.final-deco-wrapper').style.display = 'flex';
+    imageContent.classList.add('final-screen');
     return;
   }
 

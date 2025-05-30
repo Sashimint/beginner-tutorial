@@ -143,6 +143,14 @@
     animation: floatUpDown 2.5s ease-in-out infinite;
   }  
   
+  .image-content.final-screen {
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    background: none;
+    transition: height 0.3s ease;
+  }
+  
   #main-button,
   #replay-button {
     display: flex;
@@ -373,6 +381,12 @@
       background-size: contain;
       background-position: center;
     }
+
+    .image-content.final-screen {
+      height: 0 !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+    }    
 
     h1 {
       font-size: 1.3rem;
