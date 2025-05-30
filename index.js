@@ -123,6 +123,9 @@ replayButton.addEventListener('click', () => {
   progressContainer.classList.remove('hidden');
   document.getElementById('song-title').classList.remove('hidden');
   document.querySelector('.final-deco-wrapper').style.display = 'none';
+
+  imageContent.classList.remove('final-screen');
+  
 });
 
 
